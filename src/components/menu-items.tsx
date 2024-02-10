@@ -10,11 +10,6 @@ const MenuItems = () => {
 
   const menus = [
     {
-      path: "/sign-up-beasiswa",
-      name: "Daftar",
-      active: pathname === "/sign-up-beasiswa",
-    },
-    {
       path: "/beasiswa",
       name: "Hasil Beasiswa",
       active: pathname === "/beasiswa",
