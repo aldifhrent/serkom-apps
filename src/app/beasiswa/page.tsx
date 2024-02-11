@@ -32,8 +32,6 @@ const BeasiswaPage = () => {
               <TableHead className="text-center">IPK</TableHead>
               <TableHead className="text-center">Beasiswa</TableHead>
               <TableHead className="text-center">Status</TableHead>
-              <TableHead className="text-center">Created</TableHead>
-              <TableHead className="text-center">Updated</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -60,8 +58,6 @@ const BeasiswaPage = () => {
                     </span>
                   )}
                 </TableCell>
-                <TableCell className="font-medium">{moment(value.createAt).format('D MMMM YYYY')}</TableCell>
-                <TableCell className="font-medium">{moment(value.updateAt).format('D MMMM YYYY')}</TableCell>
               </TableRow>
             ))}
           </TableBody>
