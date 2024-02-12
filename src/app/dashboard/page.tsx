@@ -6,12 +6,11 @@ import { toast } from "sonner";
 import { useDeleteBeasiswa } from "./actions";
 import TableDashboard from "./components/table-dashboard";
 import { useFetch } from "../../../actions";
-import { routeModule } from "next/dist/build/templates/app-page";
 import { useRouter } from "next/navigation";
 
 const DashboardPage = () => {
   const route = useRouter();
-  const { data: beasiswa, refetch } = useFetch();
+  const { data: beasiswa } = useFetch();
   const { mutate: deleteBeasiswa } = useDeleteBeasiswa();
   const handleDelete = async (id: string) => {
     try {

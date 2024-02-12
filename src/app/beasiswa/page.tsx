@@ -21,8 +21,10 @@ const BeasiswaPage = () => {
       <Navbar />
       <div className="max-w-screen items-center justify-center mx-auto">
         <h1 className="text-center text-2xl font-bold mt-4">
-          Hasil Beasiswa
+          Data Beasiswa
         </h1>
+
+        <p className="text-center text-xs mt-2">Update data setiap hari</p>
         <Table className="mt-12 ">
           <TableHeader>
             <TableRow>

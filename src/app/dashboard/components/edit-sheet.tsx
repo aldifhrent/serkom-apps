@@ -94,17 +94,19 @@ const EditSheet = ({ id }: editSheetProps) => {
   const handleFileChange = async (e: any) => {
     try {
       const selectedFile = e.target.files?.[0];
-
       if (!selectedFile) {
+        // Handle if no file is selected
         return null;
       }
+      const { data, error } = await supabaseClient.storage
+        .from("berkas")
+        .upload(`${selectedFile.name}`, selectedFile);
 
-      const { data: uploadData, error: uploadError } =
-        await supabaseClient.storage
-          .from("berkas")
-          .upload(`${selectedFile.name}`, selectedFile);
+      if (error) {
+        toast.error(error.message);
+      }
 
-      if (!uploadError) {
+      if (!error) {
         const promise = () =>
           new Promise((resolve) =>
             setTimeout(() => resolve({ name: "Berkas" }), 2000),
@@ -120,9 +122,8 @@ const EditSheet = ({ id }: editSheetProps) => {
       }
       const publicUrl = await supabaseClient.storage
         .from("berkas")
-        .getPublicUrl(uploadData?.path as string);
+        .getPublicUrl(data?.path as string);
 
-      // Set nilai berkas dalam form dengan URL publik baru
       form.setValue("berkas", publicUrl.data.publicUrl);
     } catch (error) {
       console.log(error);

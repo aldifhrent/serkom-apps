@@ -11,7 +11,7 @@ interface BeasiswaProps {
 }
 const TableDashboard = ({beasiswa, handleDelete}: BeasiswaProps) => {
     return (
-        <Table className="mt-12 ">
+        <Table className="mt-12">
         <TableHeader>
           <TableRow>
             <TableHead className="text-center">No</TableHead>

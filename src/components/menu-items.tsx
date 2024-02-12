@@ -18,7 +18,7 @@ const MenuItems = () => {
   return (
     <div className="flex gap-x-4 ml-auto cursor-pointer items-center">
       {menus.map((menu) => (
-        <Link key={menu.path} href={menu.path}>
+        <Link key={menu.path} href={menu.path} className="text-white cursor-pointer hover:underline">
           {menu.name}
         </Link>
       ))}

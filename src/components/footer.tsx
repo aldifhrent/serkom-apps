@@ -1,32 +1,19 @@
-import Image from "next/image"
+import Image from "next/image";
+
 const Footer = () => {
-    return (
-        <footer className="bg-orange-500 mt-40">
-      <div className="container py-6 px-4 mx-auto">
+  return (
+    <footer className="mt-40 flex bg-slate-100">
+      <div className="container mx-auto px-4 py-6">
         <div className="flex flex-wrap gap-14 md:justify-center">
-          <div className="flex flex-wrap gap-8 md:gap-14 pt-2">
-            <div>
-              <div className="text-gray-300 font-bold text-sm mb-2">
-                Resource
-              </div>
-            </div>
-            <div>
-              <div className="text-gray-300 font-bold text-sm mb-2">
-                Company
-              </div>
-            </div>
-            <div className="w-full md:w-auto">
-              <div className="text-gray-300 font-bold text-sm mb-2">Apply</div>
-            </div>
-            <div>
-              <div className="text-gray-300 font-bold text-sm mb-2">Links</div>
-              
+          <div className="flex flex-wrap gap-8 pt-2 md:gap-14">
+            <div className="flex items-center gap-y-4 justify-between">
+              <h1 className="font-semibold mt-4 text-xl ">© Copyright 2024</h1>
             </div>
           </div>
         </div>
       </div>
     </footer>
-    )
-}
+  );
+};
 
-export default Footer
+export default Footer;

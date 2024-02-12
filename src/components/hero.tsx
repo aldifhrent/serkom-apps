@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className="flex items-center justify-around p-12 h-[500px] bg-slate-100">
       <div className="flex flex-col gap-y-4">
-        <h1 className="max-w-lg text-7xl font-bold">
+        <h1 className="max-w-lg text-6xl font-bold">
           Unlock Your Future: Scholarships for Success
         </h1>
         <Link href={"/sign-up"}>
@@ -14,7 +14,7 @@ const Hero = () => {
         </Link>
       </div>
       <div>
-        <Image src="/hero.png" alt="Hero Image" width={480} height={480}/>
+        <Image src="/hero.png" alt="Hero Image" width={440} height={440}/>
       </div>
     </div>
   );
